@@ -4,7 +4,7 @@ body {
 }
 
 .box {
-  background: #FC466B;
+  background: #fc466b;
   border-radius: 5px;
   height: 100px;
   left: 30%;
@@ -16,12 +16,12 @@ body {
 }
 
 .box-hover:hover {
-  background: #3F5EFB;
+  background: #3f5efb;
 }
 
 .box-border {
   left: 50%;
-  background: #3F5EFB;
+  background: #3f5efb;
 }
 
 .box-border:hover {
@@ -32,7 +32,7 @@ button {
   background: #61dafb;
   border: none;
   /*<offset-x><offset-y><blur-radius>*/
-  box-shadow: 0 5px 0 #B0C5CB;
+  box-shadow: 0 5px 0 #b0c5cb;
   color: #333;
   font-family: inherit;
   font-weight: bold;
@@ -40,11 +40,35 @@ button {
   outline: 0;
   padding: 12px 20px;
   position: absolute;
-  top: 20%;
-  transition: all .1s linear;
+  top: 10%;
+  transition: all 0.1s linear;
 }
 
 button:active {
-  box-shadow: 0 2px 0 #B0C5CB;
-  transform:  translateY(3px);
+  box-shadow: 0 2px 0 #b0c5cb;
+  transform: translateY(3px);
+}
+
+.round {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: slideout;
+  background-color: blue;
+  border-radius: 50%;
+  height: 50px;
+  margin-bottom: 100px;
+  width: 50px;
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 20%;
+    opacity: 1;
+  }
+
+  to {
+    margin-left: 60%;
+    opacity: 0.5;
+  }
 }
