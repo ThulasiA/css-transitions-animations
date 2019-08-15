@@ -84,19 +84,15 @@ svg {
 
 h1 {
   padding: 20px 10px;
-  margin: 20px 0;
+  margin: 20px 80px;
   font-size: 2em;
   color: #bada55;
 }
 
 .clip-h1 {
-  background: palevioletred;;
-  clip-path: polygon(0 0, 30% 0, 20% 100%, 0% 100%)
+  background: palevioletred;
+  clip-path: polygon(0 0, 30% 0, 20% 100%, 0% 100%);
 }
-
-/* svg:hover {
-  transform: scale(0.8);
-} */
 
 @keyframes heartbeat {
   from {
