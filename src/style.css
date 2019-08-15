@@ -48,3 +48,15 @@ button:active {
   box-shadow: 0 2px 0 #B0C5CB;
   transform:  translateY(3px);
 }
+
+h1 {
+  padding: 20px 10px;
+  margin: 20px 0;
+  font-size: 2em;
+  color: #bada55;
+}
+
+.clip-h1 {
+  background: palevioletred;;
+  clip-path: polygon(0 0, 30% 0, 20% 100%, 0% 100%)
+}
