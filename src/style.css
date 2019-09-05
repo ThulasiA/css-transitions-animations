@@ -3,65 +3,29 @@ body {
   font-family: Sans-serif;
 }
 
-.box {
-  background: #fc466b;
+.heart {
+  background: #ef476f;
   border-radius: 5px;
-  height: 100px;
-  left: 30%;
-  line-height: 100px; /* Same as Div Height to make text appear in the middle*/
-  position: absolute;
-  text-align: center;
-  transition: background 1s linear, border-radius 0.5s ease-out 0.5s;
-  width: 100px;
+  height: 250px;
+  margin: 3em auto;
+  width: 250px;
 }
 
-.box-hover:hover {
-  background: #3f5efb;
+svg {
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: heartbeat;
+  margin: 3em 1em;
+  transition: all 0.6s;
 }
 
-.box-border {
-  left: 50%;
-  background: #3f5efb;
-}
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
 
-.box-border:hover {
-  border-radius: 50%;
-}
-
-button {
-  background: #61dafb;
-  border: none;
-  /*<offset-x><offset-y><blur-radius>*/
-  box-shadow: 0 5px 0 #b0c5cb;
-  color: #333;
-  font-family: inherit;
-  font-weight: bold;
-  left: 41%;
-  outline: 0;
-  padding: 12px 20px;
-  position: absolute;
-  top: 20%;
-  transition: all 0.1s linear;
-}
-
-button:active {
-  box-shadow: 0 2px 0 #b0c5cb;
-  transform: translateY(3px);
-}
-
-h1 {
-  padding: 20px 10px;
-  margin: 20px 0;
-  font-size: 2em;
-  color: #bada55;
-}
-
-.clip-h1 {
-  background: palevioletred;
-  clip-path: polygon(0 0, 30% 0, 20% 100%, 0% 100%);
-}
-
-.div-h1 {
-  margin: auto;
-  border: 1px solid red;
+  to {
+    transform: scale(0.8);
+  }
 }
