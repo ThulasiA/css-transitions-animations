@@ -3,6 +3,10 @@ body {
   font-family: Sans-serif;
 }
 
+.wrapper {
+  display: flex;
+}
+
 .heart {
   background: #ef476f;
   border-radius: 5px;
@@ -11,7 +15,7 @@ body {
   width: 250px;
 }
 
-svg {
+.heart svg {
   animation-duration: 0.6s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -27,5 +31,31 @@ svg {
 
   to {
     transform: scale(0.8);
+  }
+}
+
+.star {
+  background: #333;
+  border-radius: 5px;
+  height: 250px;
+  margin: 3em auto;
+  width: 250px;
+}
+
+.star svg {
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: movingstar;
+  margin: 3em 1em;
+  transition: all 1s;
+}
+
+@keyframes movingstar {
+  from {
+    transform: rotate(0deg) translate(-100px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-100px) rotate(-360deg);
   }
 }
