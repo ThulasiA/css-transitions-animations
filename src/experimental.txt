@@ -1,0 +1,205 @@
+body {
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.heart {
+  background: #EF476F;
+  border-radius: 5px;
+  height: 250px;
+  margin: auto;
+  width: 250px;  
+}
+
+svg {
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: heartbeat;
+  margin: 3em 1em;
+  transition: all 0.6s;
+}
+.box {
+  background: #fc466b;
+  border-radius: 5px;
+  height: 100px;
+  left: 30%;
+  line-height: 100px; /* Same as Div Height to make text appear in the middle*/
+  position: absolute;
+  text-align: center;
+  transition: background 1s linear, border-radius 0.5s ease-out 0.5s;
+  width: 100px;
+}
+
+.box-hover:hover {
+  background: #3f5efb;
+}
+
+.box-border {
+  left: 50%;
+  background: #3f5efb;
+}
+
+.box-border:hover {
+  border-radius: 50%;
+}
+
+button {
+  background: #61dafb;
+  border: none;
+  /*<offset-x><offset-y><blur-radius>*/
+  box-shadow: 0 5px 0 #b0c5cb;
+  color: #333;
+  font-family: inherit;
+  font-weight: bold;
+  left: 41%;
+  outline: 0;
+  padding: 12px 20px;
+  position: absolute;
+  top: 10%;
+  transition: all 0.1s linear;
+}
+
+button:active {
+  box-shadow: 0 2px 0 #b0c5cb;
+  transform: translateY(3px);
+}
+
+.round {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: slideout;
+  background-color: blue;
+  border-radius: 50%;
+  height: 50px;
+  margin-bottom: 100px;
+  width: 50px;
+}
+
+@keyframes slideout {
+  from {
+    margin-left: 20%;
+    opacity: 1;
+  }
+
+  to {
+    margin-left: 60%;
+    opacity: 0.5;
+  }
+}
+
+
+
+h1 {
+  padding: 20px 10px;
+  margin: 20px 80px;
+  font-size: 2em;
+  color: #bada55;
+}
+
+.clip-h1 {
+  background: palevioletred;
+  clip-path: polygon(0 0, 30% 0, 20% 100%, 0% 100%);
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.8);
+  }
+}
+
+.shape {
+   height: 0;
+   margin: auto;
+   text-align: center;
+   width: 0;
+}
+
+.up-triangle {
+  border-left: 50px solid transparent;
+  border-top: 50px solid #ead3e3;
+  border-right: 50px solid transparent;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: triangle;
+  transition: all 1s ease;
+}
+
+.left-triangle {
+  border-left: 50px solid #ead3e3;
+  border-bottom: 50px solid transparent;
+  border-top: 50px solid transparent;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: triangle;
+  margin-left: 40%;
+  margin-top: -0.4em;
+  transition: all 1s ease;
+}
+
+.down-triangle {
+  border-left: 50px solid transparent;
+  border-bottom: 50px solid #ead3e3;
+  border-right: 50px solid transparent;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: triangle;
+  margin-top: 0.1em;
+  transition: all 1s ease;
+}
+
+.right-triangle {
+  border-right: 50px solid #ead3e3;
+  border-bottom: 50px solid transparent;
+  border-top: 50px solid transparent;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: triangle;
+  margin-right: 40%;
+  margin-top: -9em;
+  transition: all 1s ease;
+}
+
+@keyframes triangle {
+  0 {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  100% {
+    transform: rotate(0);
+  }
+}
+
+
+/* .clip-triangle {
+    width: 50px;
+    height: 50px;
+    background: green;
+
+    /* The points are: centered top, left bottom, right bottom */
+    /* clip-path: ellipse(13px 10px at 10% 40%);
+  margin: auto;
+  text-align: center;
+} */
+
+/* h1 {
+  padding: 20px 10px;
+  margin: 20px 0;
+  font-size: 2em;
+  color: #bada55;
+} */
+
+/* .clip-h1 {
+  background: palevioletred;;
+  clip-path: polygon(0 0, 30% 0, 20% 100%, 0% 100%)
+} */
+

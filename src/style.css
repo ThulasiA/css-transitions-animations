@@ -16,7 +16,7 @@ body {
 }
 
 .heart svg {
-  animation-duration: 0.6s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-name: heartbeat;
@@ -30,7 +30,7 @@ body {
   }
 
   to {
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
 }
 
@@ -42,20 +42,39 @@ body {
   width: 250px;
 }
 
+.star p {
+  font-size: 0.8em;
+  text-align: center;
+}
+
 .star svg {
   animation-duration: 6s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 3;
   animation-direction: alternate;
   animation-name: movingstar;
-  margin: 3em 1em;
+  margin: 2em 1em;
   transition: all 1s;
 }
 
 @keyframes movingstar {
-  from {
-    transform: rotate(0deg) translate(-100px) rotate(0deg);
+  0% {
+    transform: rotate(0deg) translate(-5px) rotate(45deg);
   }
-  to {
-    transform: rotate(360deg) translate(-100px) rotate(-360deg);
+  50% {
+    transform: rotate(45deg) translate(-25px) rotate(90deg);
+  }
+  75% {
+    transform: rotate(90deg) translate(50px) rotate(135deg);
+  }
+  100% {
+    transform: rotate(130deg) translate(100px) rotate(180deg);
+  }
+}
+
+/* No animation for better accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .heart svg,
+  .star svg {
+    animation: none;
   }
 }
